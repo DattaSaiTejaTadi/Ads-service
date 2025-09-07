@@ -1,0 +1,43 @@
+# Step 1: Build stage
+FROM golang:1.25-alpine AS builder
+
+WORKDIR /app
+RUN apk add --no-cache git
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+
+RUN go build -o api ./cmd/api
+RUN go build -o consumer ./cmd/consumer
+
+# Step 2: Run stage
+FROM alpine:3.20
+
+WORKDIR /app
+RUN apk add --no-cache ca-certificates
+
+COPY --from=builder /app/api .
+COPY --from=builder /app/consumer .
+
+# Expose API port
+EXPOSE 8080
+
+# ✅ Environment variables (default values, override in runtime)
+ENV DB_HOST=localhost \
+    DB_USER=postgres \
+    DB_PASSWORD=example \
+    DB_PORT=5432 \
+    DB_DIALECT=postgres \
+    DB_NAME=ads \
+    DB_SSL=disable \
+    REDIS_ADDR=localhost:6379 \
+    REDIS_PASSWORD= \
+    REDIS_DB=0 \
+    PORT=8080 \
+    KAFKA_ADDRESS=localhost:9092 \
+    KAFKA_TOPIC=clicks
+
+# Default run API
+CMD ["./api"]

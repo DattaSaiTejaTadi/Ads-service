@@ -1,0 +1,1032 @@
+2025-09-07 14:38:07,138 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2025-09-07 14:38:07,158 INFO o.a.j.JMeter: Loading user properties from: C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\bin\user.properties
+2025-09-07 14:38:07,159 INFO o.a.j.JMeter: Loading system properties from: C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\bin\system.properties
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: Version 5.6.3
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: java.version=23.0.1
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: os.name=Windows 10
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: os.arch=amd64
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: os.version=10.0
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: file.encoding=UTF-8
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: java.awt.headless=true
+2025-09-07 14:38:07,167 INFO o.a.j.JMeter: Max memory     =1073741824
+2025-09-07 14:38:07,168 INFO o.a.j.JMeter: Available Processors =8
+2025-09-07 14:38:07,184 INFO o.a.j.JMeter: Default Locale=English (EN)
+2025-09-07 14:38:07,184 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2025-09-07 14:38:07,184 INFO o.a.j.JMeter: JMeterHome=C:\Users\Home\AppData\Local\apache-jmeter-5.6.3
+2025-09-07 14:38:07,184 INFO o.a.j.JMeter: user.dir  =E:\golang\src\github.com\Assignements\Ad clicks\loadTesting
+2025-09-07 14:38:07,185 INFO o.a.j.JMeter: PWD       =E:\golang\src\github.com\Assignements\Ad clicks\loadTesting
+2025-09-07 14:38:07,186 INFO o.a.j.JMeter: IP: 172.25.32.1 Name: DESKTOP-A9854M6 FullName: DESKTOP-A9854M6.mshome.net
+2025-09-07 14:38:07,213 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\run4Dashboard'
+2025-09-07 14:38:07,217 INFO o.a.j.s.FileServer: Default base='E:\golang\src\github.com\Assignements\Ad clicks\loadTesting'
+2025-09-07 14:38:07,218 INFO o.a.j.s.FileServer: Set new base='E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\.\scripts'
+2025-09-07 14:38:07,516 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2025-09-07 14:38:07,553 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2025-09-07 14:38:07,562 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2025-09-07 14:38:07,565 INFO o.a.j.s.SaveService: Loading file: .\scripts\ads.jmx
+2025-09-07 14:38:07,674 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-09-07 14:38:07,674 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-09-07 14:38:07,674 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-09-07 14:38:07,674 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2025-09-07 14:38:07,674 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2025-09-07 14:38:07,674 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2025-09-07 14:38:07,706 INFO o.a.j.JMeter: Creating summariser <summary>
+2025-09-07 14:38:07,710 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2025-09-07 14:38:07,710 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: results\run4U300.jtl
+2025-09-07 14:38:07,710 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\bin\reportgenerator.properties
+2025-09-07 14:38:07,712 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2025-09-07 14:38:07,717 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2025-09-07 14:38:07,720 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2025-09-07 14:38:07,720 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2025-09-07 14:38:07,720 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2025-09-07 14:38:07,720 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2025-09-07 14:38:07,720 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2025-09-07 14:38:07,720 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2025-09-07 14:38:07,720 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2025-09-07 14:38:07,721 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2025-09-07 14:38:07,724 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,724 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,725 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2025-09-07 14:38:07,728 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2025-09-07 14:38:07,728 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2025-09-07 14:38:07,728 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2025-09-07 14:38:07,728 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2025-09-07 14:38:07,728 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2025-09-07 14:38:07,728 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2025-09-07 14:38:07,744 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2025-09-07 14:38:07,745 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-09-07 14:38:07,745 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2025-09-07 14:38:07,757 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2025-09-07 14:38:07,758 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2025-09-07 14:38:07,837 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-manager-1.10.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-09-07 14:38:07,953 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-casutg-3.0.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-09-07 14:38:07,964 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\lib\ext\jmeter-parallel-0.12.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-09-07 14:38:07,972 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\lib\ext\baolu-csv-data-file-config-1.2.4.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-09-07 14:38:07,976 INFO o.a.j.r.ClassFinder: Will scan jar C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\lib\ext\jmeter-plugins-cmn-jmeter-0.7.jar with filter ExtendsClassFilter [parents=[interface org.apache.jmeter.functions.Function], inner=false, contains=null, notContains=null]. Consider exposing JMeter plugins via META-INF/services, and add JMeter-Skip-Class-Scanning=true manifest attribute so JMeter can skip classfile scanning
+2025-09-07 14:38:08,015 INFO o.a.j.JMeter: Running test (1757236088015)
+2025-09-07 14:38:08,032 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : ad clciks
+2025-09-07 14:38:08,033 INFO o.a.j.e.StandardJMeterEngine: Starting 300 threads for group ad clciks.
+2025-09-07 14:38:08,033 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2025-09-07 14:38:08,033 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=300 ramp-up=1 delayedStart=false
+2025-09-07 14:38:08,039 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-1
+2025-09-07 14:38:08,038 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-2
+2025-09-07 14:38:08,043 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-3
+2025-09-07 14:38:08,045 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-4
+2025-09-07 14:38:08,048 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-5
+2025-09-07 14:38:08,051 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-6
+2025-09-07 14:38:08,055 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-7
+2025-09-07 14:38:08,057 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-8
+2025-09-07 14:38:08,059 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-9
+2025-09-07 14:38:08,061 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-10
+2025-09-07 14:38:08,063 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-A9854M6
+2025-09-07 14:38:08,066 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-11
+2025-09-07 14:38:08,067 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-12
+2025-09-07 14:38:08,070 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-13
+2025-09-07 14:38:08,074 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-14
+2025-09-07 14:38:08,077 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-15
+2025-09-07 14:38:08,077 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2025-09-07 14:38:08,079 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-16
+2025-09-07 14:38:08,079 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2025-09-07 14:38:08,080 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2025-09-07 14:38:08,080 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2025-09-07 14:38:08,080 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2025-09-07 14:38:08,083 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-17
+2025-09-07 14:38:08,085 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-18
+2025-09-07 14:38:08,089 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-19
+2025-09-07 14:38:08,092 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-20
+2025-09-07 14:38:08,096 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-21
+2025-09-07 14:38:08,100 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-22
+2025-09-07 14:38:08,100 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-23
+2025-09-07 14:38:08,103 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-24
+2025-09-07 14:38:08,107 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-25
+2025-09-07 14:38:08,110 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-26
+2025-09-07 14:38:08,113 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-27
+2025-09-07 14:38:08,116 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-28
+2025-09-07 14:38:08,118 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-29
+2025-09-07 14:38:08,122 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-30
+2025-09-07 14:38:08,131 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-33
+2025-09-07 14:38:08,133 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-31
+2025-09-07 14:38:08,133 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-32
+2025-09-07 14:38:08,136 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-34
+2025-09-07 14:38:08,142 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-35
+2025-09-07 14:38:08,143 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-36
+2025-09-07 14:38:08,145 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2025-09-07 14:38:08,145 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2025-09-07 14:38:08,146 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-37
+2025-09-07 14:38:08,147 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-38
+2025-09-07 14:38:08,150 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-39
+2025-09-07 14:38:08,153 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-40
+2025-09-07 14:38:08,154 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-41
+2025-09-07 14:38:08,157 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-42
+2025-09-07 14:38:08,160 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-43
+2025-09-07 14:38:08,164 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-44
+2025-09-07 14:38:08,167 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-45
+2025-09-07 14:38:08,170 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-46
+2025-09-07 14:38:08,173 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-47
+2025-09-07 14:38:08,176 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-48
+2025-09-07 14:38:08,178 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-49
+2025-09-07 14:38:08,183 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-50
+2025-09-07 14:38:08,185 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-51
+2025-09-07 14:38:08,187 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-52
+2025-09-07 14:38:08,191 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-53
+2025-09-07 14:38:08,193 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-54
+2025-09-07 14:38:08,197 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-55
+2025-09-07 14:38:08,200 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-56
+2025-09-07 14:38:08,204 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-57
+2025-09-07 14:38:08,206 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-58
+2025-09-07 14:38:08,209 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-59
+2025-09-07 14:38:08,212 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-60
+2025-09-07 14:38:08,215 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-61
+2025-09-07 14:38:08,218 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-62
+2025-09-07 14:38:08,220 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-63
+2025-09-07 14:38:08,224 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-64
+2025-09-07 14:38:08,227 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-65
+2025-09-07 14:38:08,228 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-66
+2025-09-07 14:38:08,232 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-67
+2025-09-07 14:38:08,236 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-68
+2025-09-07 14:38:08,239 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-69
+2025-09-07 14:38:08,242 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-70
+2025-09-07 14:38:08,244 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-71
+2025-09-07 14:38:08,248 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-72
+2025-09-07 14:38:08,251 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-73
+2025-09-07 14:38:08,254 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-74
+2025-09-07 14:38:08,257 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-75
+2025-09-07 14:38:08,261 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-76
+2025-09-07 14:38:08,263 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-77
+2025-09-07 14:38:08,266 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-78
+2025-09-07 14:38:08,268 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-79
+2025-09-07 14:38:08,272 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-80
+2025-09-07 14:38:08,276 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-81
+2025-09-07 14:38:08,277 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-82
+2025-09-07 14:38:08,280 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-83
+2025-09-07 14:38:08,284 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-84
+2025-09-07 14:38:08,286 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-85
+2025-09-07 14:38:08,289 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-86
+2025-09-07 14:38:08,292 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-87
+2025-09-07 14:38:08,297 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-88
+2025-09-07 14:38:08,299 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-89
+2025-09-07 14:38:08,302 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-90
+2025-09-07 14:38:08,304 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-91
+2025-09-07 14:38:08,309 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-92
+2025-09-07 14:38:08,312 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-93
+2025-09-07 14:38:08,314 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-94
+2025-09-07 14:38:08,317 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-95
+2025-09-07 14:38:08,321 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-96
+2025-09-07 14:38:08,323 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-97
+2025-09-07 14:38:08,326 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-98
+2025-09-07 14:38:08,329 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-99
+2025-09-07 14:38:08,333 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-100
+2025-09-07 14:38:08,336 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-101
+2025-09-07 14:38:08,338 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-102
+2025-09-07 14:38:08,341 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-103
+2025-09-07 14:38:08,344 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-104
+2025-09-07 14:38:08,347 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-105
+2025-09-07 14:38:08,349 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-106
+2025-09-07 14:38:08,359 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-109
+2025-09-07 14:38:08,362 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-110
+2025-09-07 14:38:08,371 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-113
+2025-09-07 14:38:08,375 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-107
+2025-09-07 14:38:08,375 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-108
+2025-09-07 14:38:08,377 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-112
+2025-09-07 14:38:08,377 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-114
+2025-09-07 14:38:08,378 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-111
+2025-09-07 14:38:08,380 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-115
+2025-09-07 14:38:08,380 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-116
+2025-09-07 14:38:08,383 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-117
+2025-09-07 14:38:08,386 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-118
+2025-09-07 14:38:08,388 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-119
+2025-09-07 14:38:08,395 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-121
+2025-09-07 14:38:08,396 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-120
+2025-09-07 14:38:08,398 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-122
+2025-09-07 14:38:08,401 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-123
+2025-09-07 14:38:08,403 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-124
+2025-09-07 14:38:08,408 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-125
+2025-09-07 14:38:08,413 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-126
+2025-09-07 14:38:08,415 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-127
+2025-09-07 14:38:08,419 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-129
+2025-09-07 14:38:08,420 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-128
+2025-09-07 14:38:08,423 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-130
+2025-09-07 14:38:08,428 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-131
+2025-09-07 14:38:08,428 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-132
+2025-09-07 14:38:08,430 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-133
+2025-09-07 14:38:08,433 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-134
+2025-09-07 14:38:08,436 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-135
+2025-09-07 14:38:08,439 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-136
+2025-09-07 14:38:08,445 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-137
+2025-09-07 14:38:08,447 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-138
+2025-09-07 14:38:08,450 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-139
+2025-09-07 14:38:08,451 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-140
+2025-09-07 14:38:08,454 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-141
+2025-09-07 14:38:08,460 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-142
+2025-09-07 14:38:08,463 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-144
+2025-09-07 14:38:08,467 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-145
+2025-09-07 14:38:08,477 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-143
+2025-09-07 14:38:08,481 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-148
+2025-09-07 14:38:08,488 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-146
+2025-09-07 14:38:08,489 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-147
+2025-09-07 14:38:08,490 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-150
+2025-09-07 14:38:08,486 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-149
+2025-09-07 14:38:08,500 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-151
+2025-09-07 14:38:08,509 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-154
+2025-09-07 14:38:08,509 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-155
+2025-09-07 14:38:08,509 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-152
+2025-09-07 14:38:08,510 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-153
+2025-09-07 14:38:08,510 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-156
+2025-09-07 14:38:08,510 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-158
+2025-09-07 14:38:08,512 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-157
+2025-09-07 14:38:08,516 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-159
+2025-09-07 14:38:08,515 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-160
+2025-09-07 14:38:08,521 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-161
+2025-09-07 14:38:08,527 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-162
+2025-09-07 14:38:08,531 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-163
+2025-09-07 14:38:08,543 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-164
+2025-09-07 14:38:08,543 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-165
+2025-09-07 14:38:08,549 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-168
+2025-09-07 14:38:08,549 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-169
+2025-09-07 14:38:08,551 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-172
+2025-09-07 14:38:08,550 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-167
+2025-09-07 14:38:08,550 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-166
+2025-09-07 14:38:08,553 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-170
+2025-09-07 14:38:08,554 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-171
+2025-09-07 14:38:08,557 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-174
+2025-09-07 14:38:08,557 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-173
+2025-09-07 14:38:08,558 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-175
+2025-09-07 14:38:08,562 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-176
+2025-09-07 14:38:08,565 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-177
+2025-09-07 14:38:08,567 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-178
+2025-09-07 14:38:08,570 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-179
+2025-09-07 14:38:08,574 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-180
+2025-09-07 14:38:08,577 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-182
+2025-09-07 14:38:08,577 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-181
+2025-09-07 14:38:08,581 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-183
+2025-09-07 14:38:08,586 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-184
+2025-09-07 14:38:08,588 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-185
+2025-09-07 14:38:08,612 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-186
+2025-09-07 14:38:08,615 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-187
+2025-09-07 14:38:08,619 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-190
+2025-09-07 14:38:08,619 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-191
+2025-09-07 14:38:08,625 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-188
+2025-09-07 14:38:08,626 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-189
+2025-09-07 14:38:08,620 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-194
+2025-09-07 14:38:08,627 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-192
+2025-09-07 14:38:08,629 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-193
+2025-09-07 14:38:08,620 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-195
+2025-09-07 14:38:08,634 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-199
+2025-09-07 14:38:08,634 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-198
+2025-09-07 14:38:08,640 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-196
+2025-09-07 14:38:08,640 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-197
+2025-09-07 14:38:08,644 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-202
+2025-09-07 14:38:08,644 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-203
+2025-09-07 14:38:08,644 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-200
+2025-09-07 14:38:08,646 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-201
+2025-09-07 14:38:08,647 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-204
+2025-09-07 14:38:08,652 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-206
+2025-09-07 14:38:08,654 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-207
+2025-09-07 14:38:08,663 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-210
+2025-09-07 14:38:08,663 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-205
+2025-09-07 14:38:08,666 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-211
+2025-09-07 14:38:08,667 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-208
+2025-09-07 14:38:08,668 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-209
+2025-09-07 14:38:08,676 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-212
+2025-09-07 14:38:08,681 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-213
+2025-09-07 14:38:08,687 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-214
+2025-09-07 14:38:08,689 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-216
+2025-09-07 14:38:08,696 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-217
+2025-09-07 14:38:08,696 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-215
+2025-09-07 14:38:08,697 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-220
+2025-09-07 14:38:08,705 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-221
+2025-09-07 14:38:08,706 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-218
+2025-09-07 14:38:08,707 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-225
+2025-09-07 14:38:08,707 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-224
+2025-09-07 14:38:08,713 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-219
+2025-09-07 14:38:08,715 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-228
+2025-09-07 14:38:08,718 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-222
+2025-09-07 14:38:08,723 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-229
+2025-09-07 14:38:08,728 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-226
+2025-09-07 14:38:08,729 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-223
+2025-09-07 14:38:08,729 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-232
+2025-09-07 14:38:08,730 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-227
+2025-09-07 14:38:08,732 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-233
+2025-09-07 14:38:08,738 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-230
+2025-09-07 14:38:08,741 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-236
+2025-09-07 14:38:08,741 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-231
+2025-09-07 14:38:08,744 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-237
+2025-09-07 14:38:08,750 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-234
+2025-09-07 14:38:08,752 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-240
+2025-09-07 14:38:08,754 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-241
+2025-09-07 14:38:08,754 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-235
+2025-09-07 14:38:08,764 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-244
+2025-09-07 14:38:08,764 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-238
+2025-09-07 14:38:08,766 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-245
+2025-09-07 14:38:08,766 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-239
+2025-09-07 14:38:08,774 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-242
+2025-09-07 14:38:08,777 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-243
+2025-09-07 14:38:08,778 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-248
+2025-09-07 14:38:08,780 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-249
+2025-09-07 14:38:08,798 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-246
+2025-09-07 14:38:08,798 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-247
+2025-09-07 14:38:08,799 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-253
+2025-09-07 14:38:08,813 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-250
+2025-09-07 14:38:08,813 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-252
+2025-09-07 14:38:08,813 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-251
+2025-09-07 14:38:08,814 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-257
+2025-09-07 14:38:08,814 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-255
+2025-09-07 14:38:08,819 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-256
+2025-09-07 14:38:08,819 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-254
+2025-09-07 14:38:08,821 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-258
+2025-09-07 14:38:08,824 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-259
+2025-09-07 14:38:08,825 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-260
+2025-09-07 14:38:08,829 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-261
+2025-09-07 14:38:08,834 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-262
+2025-09-07 14:38:08,836 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-263
+2025-09-07 14:38:08,837 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-264
+2025-09-07 14:38:08,840 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-265
+2025-09-07 14:38:08,846 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-266
+2025-09-07 14:38:08,848 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-267
+2025-09-07 14:38:08,848 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-268
+2025-09-07 14:38:08,851 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-269
+2025-09-07 14:38:08,855 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-270
+2025-09-07 14:38:08,858 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-271
+2025-09-07 14:38:08,860 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-272
+2025-09-07 14:38:08,862 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-273
+2025-09-07 14:38:08,868 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-274
+2025-09-07 14:38:08,871 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-276
+2025-09-07 14:38:08,871 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-275
+2025-09-07 14:38:08,874 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-277
+2025-09-07 14:38:08,882 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-280
+2025-09-07 14:38:08,880 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-278
+2025-09-07 14:38:08,886 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-279
+2025-09-07 14:38:08,892 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-281
+2025-09-07 14:38:08,897 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-282
+2025-09-07 14:38:08,898 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-285
+2025-09-07 14:38:08,898 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-284
+2025-09-07 14:38:08,898 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-283
+2025-09-07 14:38:08,902 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-286
+2025-09-07 14:38:08,917 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-288
+2025-09-07 14:38:08,917 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-287
+2025-09-07 14:38:08,917 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-290
+2025-09-07 14:38:08,917 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-289
+2025-09-07 14:38:08,919 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-292
+2025-09-07 14:38:08,920 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-291
+2025-09-07 14:38:08,923 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-293
+2025-09-07 14:38:08,928 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-294
+2025-09-07 14:38:08,930 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-295
+2025-09-07 14:38:08,931 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-296
+2025-09-07 14:38:08,935 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-297
+2025-09-07 14:38:08,936 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-298
+2025-09-07 14:38:08,940 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-299
+2025-09-07 14:38:08,945 INFO o.a.j.t.JMeterThread: Thread started: ad clciks 1-300
+2025-09-07 14:38:30,005 INFO o.a.j.r.Summariser: summary +  44583 in 00:00:22 = 2027.9/s Avg:   143 Min:     0 Max:   951 Err:     0 (0.00%) Active: 300 Started: 300 Finished: 0
+2025-09-07 14:38:55,414 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-88
+2025-09-07 14:38:55,414 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-174
+2025-09-07 14:38:55,419 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-88
+2025-09-07 14:38:55,419 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-174
+2025-09-07 14:38:55,979 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-162
+2025-09-07 14:38:55,979 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-162
+2025-09-07 14:38:56,198 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-87
+2025-09-07 14:38:56,198 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-87
+2025-09-07 14:38:56,199 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-49
+2025-09-07 14:38:56,199 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-49
+2025-09-07 14:38:56,199 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-211
+2025-09-07 14:38:56,200 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-211
+2025-09-07 14:38:56,213 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-2
+2025-09-07 14:38:56,215 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-2
+2025-09-07 14:38:56,256 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-135
+2025-09-07 14:38:56,256 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-135
+2025-09-07 14:38:56,377 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-141
+2025-09-07 14:38:56,377 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-141
+2025-09-07 14:38:56,395 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-5
+2025-09-07 14:38:56,396 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-5
+2025-09-07 14:38:56,422 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-76
+2025-09-07 14:38:56,422 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-76
+2025-09-07 14:38:56,431 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-125
+2025-09-07 14:38:56,431 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-125
+2025-09-07 14:38:56,441 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-29
+2025-09-07 14:38:56,441 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-29
+2025-09-07 14:38:56,448 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-97
+2025-09-07 14:38:56,448 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-97
+2025-09-07 14:38:56,451 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-241
+2025-09-07 14:38:56,451 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-241
+2025-09-07 14:38:56,501 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-53
+2025-09-07 14:38:56,502 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-53
+2025-09-07 14:38:56,527 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-36
+2025-09-07 14:38:56,528 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-36
+2025-09-07 14:38:56,535 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-151
+2025-09-07 14:38:56,535 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-151
+2025-09-07 14:38:56,537 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-37
+2025-09-07 14:38:56,537 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-37
+2025-09-07 14:38:56,556 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-143
+2025-09-07 14:38:56,556 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-143
+2025-09-07 14:38:56,557 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-200
+2025-09-07 14:38:56,557 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-200
+2025-09-07 14:38:56,566 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-128
+2025-09-07 14:38:56,567 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-128
+2025-09-07 14:38:56,567 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-98
+2025-09-07 14:38:56,567 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-98
+2025-09-07 14:38:56,568 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-235
+2025-09-07 14:38:56,569 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-235
+2025-09-07 14:38:56,604 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-157
+2025-09-07 14:38:56,604 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-157
+2025-09-07 14:38:56,606 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-65
+2025-09-07 14:38:56,606 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-65
+2025-09-07 14:38:56,611 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-58
+2025-09-07 14:38:56,611 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-58
+2025-09-07 14:38:56,612 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-164
+2025-09-07 14:38:56,613 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-164
+2025-09-07 14:38:56,639 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-160
+2025-09-07 14:38:56,639 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-160
+2025-09-07 14:38:56,648 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-202
+2025-09-07 14:38:56,650 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-202
+2025-09-07 14:38:56,651 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-189
+2025-09-07 14:38:56,652 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-189
+2025-09-07 14:38:56,654 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-130
+2025-09-07 14:38:56,655 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-130
+2025-09-07 14:38:56,662 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-80
+2025-09-07 14:38:56,662 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-80
+2025-09-07 14:38:56,663 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-114
+2025-09-07 14:38:56,664 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-114
+2025-09-07 14:38:56,665 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-245
+2025-09-07 14:38:56,665 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-182
+2025-09-07 14:38:56,665 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-245
+2025-09-07 14:38:56,665 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-182
+2025-09-07 14:38:56,712 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-156
+2025-09-07 14:38:56,712 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-156
+2025-09-07 14:38:56,714 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-179
+2025-09-07 14:38:56,714 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-179
+2025-09-07 14:38:56,746 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-43
+2025-09-07 14:38:56,746 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-43
+2025-09-07 14:38:56,749 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-183
+2025-09-07 14:38:56,749 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-183
+2025-09-07 14:38:56,762 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-136
+2025-09-07 14:38:56,762 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-136
+2025-09-07 14:38:56,763 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-275
+2025-09-07 14:38:56,763 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-275
+2025-09-07 14:38:56,764 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-62
+2025-09-07 14:38:56,764 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-62
+2025-09-07 14:38:56,791 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-63
+2025-09-07 14:38:56,792 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-63
+2025-09-07 14:38:56,792 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-199
+2025-09-07 14:38:56,792 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-199
+2025-09-07 14:38:56,794 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-126
+2025-09-07 14:38:56,794 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-126
+2025-09-07 14:38:56,796 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-293
+2025-09-07 14:38:56,796 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-293
+2025-09-07 14:38:56,801 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-54
+2025-09-07 14:38:56,801 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-54
+2025-09-07 14:38:56,805 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-169
+2025-09-07 14:38:56,805 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-169
+2025-09-07 14:38:56,807 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-44
+2025-09-07 14:38:56,807 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-44
+2025-09-07 14:38:56,811 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-172
+2025-09-07 14:38:56,811 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-172
+2025-09-07 14:38:56,812 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-207
+2025-09-07 14:38:56,813 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-207
+2025-09-07 14:38:56,813 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-12
+2025-09-07 14:38:56,813 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-12
+2025-09-07 14:38:56,815 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-56
+2025-09-07 14:38:56,815 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-56
+2025-09-07 14:38:56,817 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-95
+2025-09-07 14:38:56,817 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-95
+2025-09-07 14:38:56,817 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-117
+2025-09-07 14:38:56,817 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-117
+2025-09-07 14:38:56,818 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-9
+2025-09-07 14:38:56,818 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-9
+2025-09-07 14:38:56,819 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-48
+2025-09-07 14:38:56,819 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-48
+2025-09-07 14:38:56,819 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-35
+2025-09-07 14:38:56,820 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-35
+2025-09-07 14:38:56,829 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-39
+2025-09-07 14:38:56,829 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-39
+2025-09-07 14:38:56,845 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-258
+2025-09-07 14:38:56,845 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-258
+2025-09-07 14:38:56,846 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-77
+2025-09-07 14:38:56,846 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-77
+2025-09-07 14:38:56,859 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-234
+2025-09-07 14:38:56,859 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-23
+2025-09-07 14:38:56,859 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-23
+2025-09-07 14:38:56,859 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-234
+2025-09-07 14:38:56,864 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-47
+2025-09-07 14:38:56,864 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-47
+2025-09-07 14:38:56,865 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-283
+2025-09-07 14:38:56,865 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-283
+2025-09-07 14:38:56,865 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-173
+2025-09-07 14:38:56,866 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-173
+2025-09-07 14:38:56,866 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-115
+2025-09-07 14:38:56,866 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-115
+2025-09-07 14:38:56,869 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-78
+2025-09-07 14:38:56,869 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-78
+2025-09-07 14:38:56,897 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-6
+2025-09-07 14:38:56,897 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-6
+2025-09-07 14:38:56,917 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-120
+2025-09-07 14:38:56,918 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-120
+2025-09-07 14:38:56,919 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-89
+2025-09-07 14:38:56,919 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-89
+2025-09-07 14:38:56,921 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-180
+2025-09-07 14:38:56,922 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-180
+2025-09-07 14:38:56,929 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-90
+2025-09-07 14:38:56,930 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-90
+2025-09-07 14:38:56,930 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-188
+2025-09-07 14:38:56,931 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-188
+2025-09-07 14:38:56,933 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-106
+2025-09-07 14:38:56,933 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-106
+2025-09-07 14:38:56,934 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-291
+2025-09-07 14:38:56,934 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-291
+2025-09-07 14:38:56,950 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-131
+2025-09-07 14:38:56,950 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-131
+2025-09-07 14:38:56,950 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-19
+2025-09-07 14:38:56,950 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-19
+2025-09-07 14:38:56,951 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-278
+2025-09-07 14:38:56,951 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-278
+2025-09-07 14:38:56,957 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-292
+2025-09-07 14:38:56,957 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-292
+2025-09-07 14:38:56,965 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-193
+2025-09-07 14:38:56,965 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-193
+2025-09-07 14:38:56,968 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-191
+2025-09-07 14:38:56,969 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-191
+2025-09-07 14:38:56,969 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-118
+2025-09-07 14:38:56,969 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-118
+2025-09-07 14:38:56,973 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-288
+2025-09-07 14:38:56,973 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-288
+2025-09-07 14:38:56,979 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-228
+2025-09-07 14:38:56,979 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-228
+2025-09-07 14:38:56,979 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-45
+2025-09-07 14:38:56,979 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-45
+2025-09-07 14:38:56,980 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-212
+2025-09-07 14:38:56,980 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-212
+2025-09-07 14:38:56,982 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-197
+2025-09-07 14:38:56,982 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-197
+2025-09-07 14:38:56,983 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-69
+2025-09-07 14:38:56,983 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-69
+2025-09-07 14:38:56,984 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-93
+2025-09-07 14:38:56,984 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-93
+2025-09-07 14:38:56,989 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-297
+2025-09-07 14:38:56,989 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-297
+2025-09-07 14:38:57,003 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-159
+2025-09-07 14:38:57,004 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-159
+2025-09-07 14:38:57,005 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-175
+2025-09-07 14:38:57,005 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-175
+2025-09-07 14:38:57,011 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-203
+2025-09-07 14:38:57,011 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-203
+2025-09-07 14:38:57,028 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-140
+2025-09-07 14:38:57,028 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-140
+2025-09-07 14:38:57,049 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-51
+2025-09-07 14:38:57,050 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-51
+2025-09-07 14:38:57,058 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-13
+2025-09-07 14:38:57,060 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-13
+2025-09-07 14:38:57,070 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-4
+2025-09-07 14:38:57,070 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-4
+2025-09-07 14:38:57,077 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-86
+2025-09-07 14:38:57,077 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-71
+2025-09-07 14:38:57,077 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-71
+2025-09-07 14:38:57,077 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-22
+2025-09-07 14:38:57,078 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-86
+2025-09-07 14:38:57,078 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-22
+2025-09-07 14:38:57,081 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-237
+2025-09-07 14:38:57,081 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-17
+2025-09-07 14:38:57,081 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-237
+2025-09-07 14:38:57,081 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-17
+2025-09-07 14:38:57,083 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-105
+2025-09-07 14:38:57,083 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-105
+2025-09-07 14:38:57,084 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-145
+2025-09-07 14:38:57,085 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-145
+2025-09-07 14:38:57,100 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-263
+2025-09-07 14:38:57,100 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-263
+2025-09-07 14:38:57,103 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-267
+2025-09-07 14:38:57,103 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-267
+2025-09-07 14:38:57,109 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-281
+2025-09-07 14:38:57,110 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-281
+2025-09-07 14:38:57,112 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-154
+2025-09-07 14:38:57,112 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-154
+2025-09-07 14:38:57,112 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-147
+2025-09-07 14:38:57,112 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-147
+2025-09-07 14:38:57,115 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-190
+2025-09-07 14:38:57,115 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-190
+2025-09-07 14:38:57,118 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-170
+2025-09-07 14:38:57,118 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-170
+2025-09-07 14:38:57,119 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-61
+2025-09-07 14:38:57,119 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-61
+2025-09-07 14:38:57,121 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-121
+2025-09-07 14:38:57,121 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-121
+2025-09-07 14:38:57,125 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-294
+2025-09-07 14:38:57,126 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-294
+2025-09-07 14:38:57,146 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-233
+2025-09-07 14:38:57,146 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-233
+2025-09-07 14:38:57,150 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-116
+2025-09-07 14:38:57,150 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-116
+2025-09-07 14:38:57,152 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-100
+2025-09-07 14:38:57,152 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-100
+2025-09-07 14:38:57,154 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-146
+2025-09-07 14:38:57,154 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-146
+2025-09-07 14:38:57,158 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-113
+2025-09-07 14:38:57,158 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-113
+2025-09-07 14:38:57,161 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-271
+2025-09-07 14:38:57,162 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-271
+2025-09-07 14:38:57,162 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-279
+2025-09-07 14:38:57,162 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-279
+2025-09-07 14:38:57,163 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-31
+2025-09-07 14:38:57,164 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-31
+2025-09-07 14:38:57,164 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-270
+2025-09-07 14:38:57,164 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-270
+2025-09-07 14:38:57,175 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-148
+2025-09-07 14:38:57,175 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-148
+2025-09-07 14:38:57,177 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-209
+2025-09-07 14:38:57,177 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-209
+2025-09-07 14:38:57,177 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-66
+2025-09-07 14:38:57,178 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-66
+2025-09-07 14:38:57,178 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-239
+2025-09-07 14:38:57,178 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-239
+2025-09-07 14:38:57,185 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-224
+2025-09-07 14:38:57,185 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-224
+2025-09-07 14:38:57,186 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-152
+2025-09-07 14:38:57,187 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-152
+2025-09-07 14:38:57,189 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-216
+2025-09-07 14:38:57,189 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-216
+2025-09-07 14:38:57,192 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-30
+2025-09-07 14:38:57,193 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-30
+2025-09-07 14:38:57,195 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-177
+2025-09-07 14:38:57,195 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-177
+2025-09-07 14:38:57,195 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-33
+2025-09-07 14:38:57,195 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-33
+2025-09-07 14:38:57,197 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-248
+2025-09-07 14:38:57,198 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-248
+2025-09-07 14:38:57,198 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-168
+2025-09-07 14:38:57,199 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-168
+2025-09-07 14:38:57,200 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-257
+2025-09-07 14:38:57,201 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-257
+2025-09-07 14:38:57,208 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-201
+2025-09-07 14:38:57,208 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-201
+2025-09-07 14:38:57,210 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-205
+2025-09-07 14:38:57,210 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-205
+2025-09-07 14:38:57,215 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-91
+2025-09-07 14:38:57,215 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-91
+2025-09-07 14:38:57,219 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-104
+2025-09-07 14:38:57,219 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-104
+2025-09-07 14:38:57,220 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-110
+2025-09-07 14:38:57,220 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-110
+2025-09-07 14:38:57,220 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-60
+2025-09-07 14:38:57,220 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-60
+2025-09-07 14:38:57,221 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-227
+2025-09-07 14:38:57,222 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-227
+2025-09-07 14:38:57,224 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-269
+2025-09-07 14:38:57,224 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-269
+2025-09-07 14:38:57,226 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-166
+2025-09-07 14:38:57,226 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-253
+2025-09-07 14:38:57,226 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-166
+2025-09-07 14:38:57,226 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-253
+2025-09-07 14:38:57,229 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-261
+2025-09-07 14:38:57,229 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-261
+2025-09-07 14:38:57,230 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-79
+2025-09-07 14:38:57,230 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-79
+2025-09-07 14:38:57,231 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-243
+2025-09-07 14:38:57,231 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-243
+2025-09-07 14:38:57,236 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-72
+2025-09-07 14:38:57,236 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-59
+2025-09-07 14:38:57,236 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-72
+2025-09-07 14:38:57,236 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-59
+2025-09-07 14:38:57,236 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-222
+2025-09-07 14:38:57,236 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-222
+2025-09-07 14:38:57,237 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-250
+2025-09-07 14:38:57,237 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-250
+2025-09-07 14:38:57,244 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-46
+2025-09-07 14:38:57,244 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-46
+2025-09-07 14:38:57,245 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-18
+2025-09-07 14:38:57,245 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-18
+2025-09-07 14:38:57,245 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-102
+2025-09-07 14:38:57,245 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-102
+2025-09-07 14:38:57,250 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-103
+2025-09-07 14:38:57,250 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-103
+2025-09-07 14:38:57,260 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-41
+2025-09-07 14:38:57,260 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-41
+2025-09-07 14:38:57,261 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-186
+2025-09-07 14:38:57,261 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-186
+2025-09-07 14:38:57,262 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-68
+2025-09-07 14:38:57,262 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-68
+2025-09-07 14:38:57,263 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-150
+2025-09-07 14:38:57,263 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-150
+2025-09-07 14:38:57,264 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-109
+2025-09-07 14:38:57,264 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-109
+2025-09-07 14:38:57,265 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-259
+2025-09-07 14:38:57,265 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-259
+2025-09-07 14:38:57,267 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-74
+2025-09-07 14:38:57,267 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-74
+2025-09-07 14:38:57,268 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-185
+2025-09-07 14:38:57,268 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-185
+2025-09-07 14:38:57,271 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-73
+2025-09-07 14:38:57,271 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-73
+2025-09-07 14:38:57,272 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-204
+2025-09-07 14:38:57,273 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-204
+2025-09-07 14:38:57,275 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-142
+2025-09-07 14:38:57,275 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-142
+2025-09-07 14:38:57,277 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-155
+2025-09-07 14:38:57,277 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-155
+2025-09-07 14:38:57,279 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-171
+2025-09-07 14:38:57,279 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-171
+2025-09-07 14:38:57,279 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-178
+2025-09-07 14:38:57,279 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-178
+2025-09-07 14:38:57,280 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-81
+2025-09-07 14:38:57,280 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-81
+2025-09-07 14:38:57,284 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-101
+2025-09-07 14:38:57,285 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-101
+2025-09-07 14:38:57,287 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-264
+2025-09-07 14:38:57,287 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-264
+2025-09-07 14:38:57,290 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-176
+2025-09-07 14:38:57,290 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-176
+2025-09-07 14:38:57,298 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-266
+2025-09-07 14:38:57,299 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-266
+2025-09-07 14:38:57,299 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-138
+2025-09-07 14:38:57,299 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-138
+2025-09-07 14:38:57,299 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-127
+2025-09-07 14:38:57,299 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-127
+2025-09-07 14:38:57,303 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-124
+2025-09-07 14:38:57,304 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-124
+2025-09-07 14:38:57,311 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-28
+2025-09-07 14:38:57,312 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-28
+2025-09-07 14:38:57,313 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-8
+2025-09-07 14:38:57,313 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-8
+2025-09-07 14:38:57,314 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-265
+2025-09-07 14:38:57,314 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-265
+2025-09-07 14:38:57,316 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-134
+2025-09-07 14:38:57,316 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-134
+2025-09-07 14:38:57,328 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-139
+2025-09-07 14:38:57,328 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-139
+2025-09-07 14:38:57,339 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-144
+2025-09-07 14:38:57,339 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-144
+2025-09-07 14:38:57,345 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-7
+2025-09-07 14:38:57,345 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-7
+2025-09-07 14:38:57,345 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-217
+2025-09-07 14:38:57,345 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-217
+2025-09-07 14:38:57,345 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-67
+2025-09-07 14:38:57,345 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-67
+2025-09-07 14:38:57,347 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-187
+2025-09-07 14:38:57,347 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-187
+2025-09-07 14:38:57,347 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-96
+2025-09-07 14:38:57,347 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-96
+2025-09-07 14:38:57,348 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-230
+2025-09-07 14:38:57,348 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-83
+2025-09-07 14:38:57,348 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-230
+2025-09-07 14:38:57,348 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-83
+2025-09-07 14:38:57,348 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-161
+2025-09-07 14:38:57,349 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-161
+2025-09-07 14:38:57,349 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-280
+2025-09-07 14:38:57,349 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-280
+2025-09-07 14:38:57,350 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-240
+2025-09-07 14:38:57,351 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-240
+2025-09-07 14:38:57,351 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-122
+2025-09-07 14:38:57,351 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-122
+2025-09-07 14:38:57,352 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-55
+2025-09-07 14:38:57,352 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-55
+2025-09-07 14:38:57,353 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-24
+2025-09-07 14:38:57,353 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-24
+2025-09-07 14:38:57,353 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-84
+2025-09-07 14:38:57,353 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-84
+2025-09-07 14:38:57,368 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-15
+2025-09-07 14:38:57,368 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-15
+2025-09-07 14:38:57,377 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-85
+2025-09-07 14:38:57,377 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-85
+2025-09-07 14:38:57,379 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-163
+2025-09-07 14:38:57,380 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-163
+2025-09-07 14:38:57,380 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-262
+2025-09-07 14:38:57,380 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-262
+2025-09-07 14:38:57,381 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-1
+2025-09-07 14:38:57,381 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-1
+2025-09-07 14:38:57,382 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-290
+2025-09-07 14:38:57,382 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-290
+2025-09-07 14:38:57,382 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-285
+2025-09-07 14:38:57,383 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-285
+2025-09-07 14:38:57,384 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-132
+2025-09-07 14:38:57,384 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-132
+2025-09-07 14:38:57,385 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-112
+2025-09-07 14:38:57,385 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-112
+2025-09-07 14:38:57,386 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-108
+2025-09-07 14:38:57,386 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-108
+2025-09-07 14:38:57,386 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-252
+2025-09-07 14:38:57,386 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-252
+2025-09-07 14:38:57,395 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-94
+2025-09-07 14:38:57,396 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-94
+2025-09-07 14:38:57,396 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-40
+2025-09-07 14:38:57,396 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-40
+2025-09-07 14:38:57,396 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-249
+2025-09-07 14:38:57,396 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-249
+2025-09-07 14:38:57,397 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-295
+2025-09-07 14:38:57,397 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-295
+2025-09-07 14:38:57,398 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-225
+2025-09-07 14:38:57,398 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-225
+2025-09-07 14:38:57,398 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-82
+2025-09-07 14:38:57,398 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-82
+2025-09-07 14:38:57,399 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-32
+2025-09-07 14:38:57,399 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-32
+2025-09-07 14:38:57,400 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-236
+2025-09-07 14:38:57,400 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-236
+2025-09-07 14:38:57,400 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-223
+2025-09-07 14:38:57,400 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-223
+2025-09-07 14:38:57,401 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-153
+2025-09-07 14:38:57,401 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-153
+2025-09-07 14:38:57,402 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-123
+2025-09-07 14:38:57,402 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-123
+2025-09-07 14:38:57,403 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-284
+2025-09-07 14:38:57,403 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-284
+2025-09-07 14:38:57,407 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-238
+2025-09-07 14:38:57,407 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-238
+2025-09-07 14:38:57,407 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-247
+2025-09-07 14:38:57,407 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-247
+2025-09-07 14:38:57,409 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-196
+2025-09-07 14:38:57,410 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-196
+2025-09-07 14:38:57,410 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-215
+2025-09-07 14:38:57,410 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-215
+2025-09-07 14:38:57,410 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-42
+2025-09-07 14:38:57,411 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-42
+2025-09-07 14:38:57,412 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-300
+2025-09-07 14:38:57,412 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-300
+2025-09-07 14:38:57,412 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-220
+2025-09-07 14:38:57,412 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-220
+2025-09-07 14:38:57,412 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-70
+2025-09-07 14:38:57,412 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-70
+2025-09-07 14:38:57,413 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-38
+2025-09-07 14:38:57,413 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-208
+2025-09-07 14:38:57,413 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-38
+2025-09-07 14:38:57,413 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-208
+2025-09-07 14:38:57,413 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-149
+2025-09-07 14:38:57,413 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-149
+2025-09-07 14:38:57,414 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-165
+2025-09-07 14:38:57,414 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-165
+2025-09-07 14:38:57,415 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-210
+2025-09-07 14:38:57,415 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-210
+2025-09-07 14:38:57,415 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-195
+2025-09-07 14:38:57,415 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-195
+2025-09-07 14:38:57,416 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-137
+2025-09-07 14:38:57,416 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-137
+2025-09-07 14:38:57,416 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-198
+2025-09-07 14:38:57,416 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-198
+2025-09-07 14:38:57,419 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-219
+2025-09-07 14:38:57,419 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-219
+2025-09-07 14:38:57,419 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-27
+2025-09-07 14:38:57,419 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-27
+2025-09-07 14:38:57,421 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-214
+2025-09-07 14:38:57,421 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-214
+2025-09-07 14:38:57,423 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-277
+2025-09-07 14:38:57,423 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-277
+2025-09-07 14:38:57,427 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-244
+2025-09-07 14:38:57,427 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-244
+2025-09-07 14:38:57,429 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-3
+2025-09-07 14:38:57,430 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-3
+2025-09-07 14:38:57,442 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-26
+2025-09-07 14:38:57,443 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-26
+2025-09-07 14:38:57,443 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-21
+2025-09-07 14:38:57,444 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-21
+2025-09-07 14:38:57,445 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-34
+2025-09-07 14:38:57,445 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-34
+2025-09-07 14:38:57,445 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-50
+2025-09-07 14:38:57,445 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-50
+2025-09-07 14:38:57,446 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-282
+2025-09-07 14:38:57,446 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-282
+2025-09-07 14:38:57,448 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-25
+2025-09-07 14:38:57,449 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-25
+2025-09-07 14:38:57,449 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-158
+2025-09-07 14:38:57,449 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-158
+2025-09-07 14:38:57,451 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-218
+2025-09-07 14:38:57,451 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-218
+2025-09-07 14:38:57,453 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-167
+2025-09-07 14:38:57,453 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-167
+2025-09-07 14:38:57,455 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-287
+2025-09-07 14:38:57,455 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-287
+2025-09-07 14:38:57,459 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-251
+2025-09-07 14:38:57,459 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-251
+2025-09-07 14:38:57,460 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-119
+2025-09-07 14:38:57,460 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-119
+2025-09-07 14:38:57,461 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-226
+2025-09-07 14:38:57,461 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-226
+2025-09-07 14:38:57,462 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-192
+2025-09-07 14:38:57,462 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-192
+2025-09-07 14:38:57,463 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-111
+2025-09-07 14:38:57,463 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-111
+2025-09-07 14:38:57,465 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-16
+2025-09-07 14:38:57,465 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-16
+2025-09-07 14:38:57,466 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-273
+2025-09-07 14:38:57,466 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-273
+2025-09-07 14:38:57,468 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-246
+2025-09-07 14:38:57,468 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-246
+2025-09-07 14:38:57,469 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-242
+2025-09-07 14:38:57,469 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-242
+2025-09-07 14:38:57,470 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-92
+2025-09-07 14:38:57,471 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-92
+2025-09-07 14:38:57,483 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-10
+2025-09-07 14:38:57,484 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-10
+2025-09-07 14:38:57,486 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-14
+2025-09-07 14:38:57,486 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-14
+2025-09-07 14:38:57,492 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-289
+2025-09-07 14:38:57,492 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-289
+2025-09-07 14:38:57,499 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-221
+2025-09-07 14:38:57,499 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-221
+2025-09-07 14:38:57,510 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-296
+2025-09-07 14:38:57,510 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-296
+2025-09-07 14:38:57,510 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-99
+2025-09-07 14:38:57,510 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-99
+2025-09-07 14:38:57,512 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-255
+2025-09-07 14:38:57,512 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-255
+2025-09-07 14:38:57,514 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-254
+2025-09-07 14:38:57,514 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-254
+2025-09-07 14:38:57,515 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-20
+2025-09-07 14:38:57,515 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-20
+2025-09-07 14:38:57,517 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-57
+2025-09-07 14:38:57,517 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-57
+2025-09-07 14:38:57,518 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-181
+2025-09-07 14:38:57,518 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-181
+2025-09-07 14:38:57,518 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-256
+2025-09-07 14:38:57,518 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-256
+2025-09-07 14:38:57,524 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-260
+2025-09-07 14:38:57,525 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-260
+2025-09-07 14:38:57,528 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-213
+2025-09-07 14:38:57,528 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-213
+2025-09-07 14:38:57,529 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-274
+2025-09-07 14:38:57,529 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-274
+2025-09-07 14:38:57,530 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-52
+2025-09-07 14:38:57,530 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-52
+2025-09-07 14:38:57,530 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-107
+2025-09-07 14:38:57,530 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-107
+2025-09-07 14:38:57,532 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-194
+2025-09-07 14:38:57,532 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-194
+2025-09-07 14:38:57,533 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-286
+2025-09-07 14:38:57,534 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-286
+2025-09-07 14:38:57,534 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-64
+2025-09-07 14:38:57,534 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-64
+2025-09-07 14:38:57,535 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-206
+2025-09-07 14:38:57,535 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-206
+2025-09-07 14:38:57,536 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-133
+2025-09-07 14:38:57,536 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-133
+2025-09-07 14:38:57,548 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-231
+2025-09-07 14:38:57,548 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-231
+2025-09-07 14:38:57,549 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-129
+2025-09-07 14:38:57,549 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-229
+2025-09-07 14:38:57,549 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-129
+2025-09-07 14:38:57,549 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-229
+2025-09-07 14:38:57,551 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-276
+2025-09-07 14:38:57,551 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-276
+2025-09-07 14:38:57,551 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-298
+2025-09-07 14:38:57,551 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-298
+2025-09-07 14:38:57,565 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-75
+2025-09-07 14:38:57,565 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-75
+2025-09-07 14:38:57,566 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-11
+2025-09-07 14:38:57,567 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-11
+2025-09-07 14:38:57,567 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-272
+2025-09-07 14:38:57,567 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-272
+2025-09-07 14:38:57,568 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-232
+2025-09-07 14:38:57,568 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-232
+2025-09-07 14:38:57,568 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-268
+2025-09-07 14:38:57,568 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-268
+2025-09-07 14:38:57,568 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-184
+2025-09-07 14:38:57,569 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-184
+2025-09-07 14:38:57,569 INFO o.a.j.t.JMeterThread: Thread is done: ad clciks 1-299
+2025-09-07 14:38:57,569 INFO o.a.j.t.JMeterThread: Thread finished: ad clciks 1-299
+2025-09-07 14:38:57,570 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2025-09-07 14:38:57,577 INFO o.a.j.r.Summariser: summary +  45417 in 00:00:28 = 1647.1/s Avg:   179 Min:     0 Max:  1130 Err:     0 (0.00%) Active: 0 Started: 300 Finished: 300
+2025-09-07 14:38:57,578 INFO o.a.j.r.Summariser: summary =  90000 in 00:00:50 = 1815.9/s Avg:   161 Min:     0 Max:  1130 Err:     0 (0.00%)
+2025-09-07 14:38:57,581 INFO o.a.j.JMeter: Generating Dashboard
+2025-09-07 14:38:57,581 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2025-09-07 14:38:57,747 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2025-09-07 14:39:01,281 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2025-09-07 14:39:01,281 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2025-09-07 14:39:01,285 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2025-09-07 14:39:01,285 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2025-09-07 14:39:01,296 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2025-09-07 14:39:01,299 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2025-09-07 14:39:01,299 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2025-09-07 14:39:01,299 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2025-09-07 14:39:01,833 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2025-09-07 14:39:01,836 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2025-09-07 14:39:01,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2025-09-07 14:39:01,837 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2025-09-07 14:39:02,359 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2025-09-07 14:39:02,362 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 630000 samples
+2025-09-07 14:39:02,362 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2025-09-07 14:39:02,362 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2025-09-07 14:39:02,362 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2025-09-07 14:39:02,362 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2025-09-07 14:39:02,362 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2025-09-07 14:39:02,362 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2025-09-07 14:39:02,365 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2025-09-07 14:39:02,370 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2025-09-07 14:39:02,370 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2025-09-07 14:39:02,370 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2025-09-07 14:39:02,370 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 1350000 samples
+2025-09-07 14:39:02,370 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 270000 samples
+2025-09-07 14:39:02,370 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 90000 samples
+2025-09-07 14:39:02,370 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 90000 samples produced in 4s 564 ms on channel 0
+2025-09-07 14:39:02,370 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2025-09-07 14:39:02,502 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2025-09-07 14:39:02,502 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2025-09-07 14:39:02,502 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2025-09-07 14:39:02,503 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2025-09-07 14:39:02,503 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\run4Dashboard\statistics.json
+2025-09-07 14:39:02,563 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2025-09-07 14:39:02,566 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\run4Dashboard
+2025-09-07 14:39:02,784 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\run4Dashboard, creating folder structure
+2025-09-07 14:39:02,789 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'C:\Users\Home\AppData\Local\apache-jmeter-5.6.3\bin\report-template' to 'E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\run4Dashboard', got message: E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\run4Dashboard, found non empty folder with following content [E:\golang\src\github.com\Assignements\Ad clicks\loadTesting\run4Dashboard\statistics.json], will be ignored
+2025-09-07 14:39:03,315 INFO o.a.j.JMeter: Dashboard generated
