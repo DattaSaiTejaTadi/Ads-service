@@ -386,10 +386,6 @@ Each test simulated the complete flow:
 4.  Push to the branch (`git push origin feature/amazing-feature`)
 5.  Open a Pull Request
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](https://claude.ai/chat/LICENSE) file for details.
-
 ----------
 
 ## Summary
