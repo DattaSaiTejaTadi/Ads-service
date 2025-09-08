@@ -3,9 +3,10 @@ package store
 import (
 	"database/sql"
 	"fmt"
-	"log"
 	"strconv"
 	"time"
+
+	"log/slog"
 
 	"github.com/golang-migrate/migrate/v4"
 	"github.com/syntaxLabz/configManager/pkg/configManager"
@@ -78,7 +79,7 @@ func intializeDBConfigs(c *configManager.Config, prefix string) dbConfig {
 	return dbConfig
 }
 
-func InitializeDB(c *configManager.Config, prefix string) *sql.DB {
+func InitializeDB(c *configManager.Config, prefix string, logger *slog.Logger) *sql.DB {
 	dbConfig := intializeDBConfigs(c, prefix)
 
 	if dbConfig.host != "" && dbConfig.port != "" && dbConfig.user != "" && dbConfig.password != "" && dbConfig.dialect != "" {
@@ -86,7 +87,7 @@ func InitializeDB(c *configManager.Config, prefix string) *sql.DB {
 			dbConfig.sslMode = "disable"
 		}
 
-		db, err := establishDBConnection(dbConfig)
+		db, err := establishDBConnection(dbConfig, logger)
 		if err == nil {
 			db.SetMaxOpenConns(dbConfig.maxOpenConns)
 			db.SetMaxIdleConns(dbConfig.maxIdleConns)
@@ -100,7 +101,7 @@ func InitializeDB(c *configManager.Config, prefix string) *sql.DB {
 	return nil
 }
 
-func establishDBConnection(c dbConfig) (*sql.DB, error) {
+func establishDBConnection(c dbConfig, logger *slog.Logger) (*sql.DB, error) {
 	connectionString := generateConnectionString(c)
 	if connectionString == "" {
 		return nil, httperrors.New(codes.InternalServerError, "Invalid dialect")
@@ -108,13 +109,13 @@ func establishDBConnection(c dbConfig) (*sql.DB, error) {
 
 	db, err := sql.Open(c.dialect, connectionString)
 	if err != nil {
-		log.Println("Error while connecting to database", err)
+		logger.Error("Error while connecting to database", slog.Any("error", err))
 		return db, err
 	}
 
 	err = db.Ping()
 	if err != nil {
-		log.Println("Error while pinging to database", err)
+		logger.Error("Error while pinging to database", slog.Any("error", err))
 		return db, err
 	}
 
@@ -132,7 +133,7 @@ func generateConnectionString(c dbConfig) string {
 	return ""
 }
 
-func RunMigrations(configs *configManager.Config) {
+func RunMigrations(configs *configManager.Config, logger *slog.Logger) {
 	dbConfig := intializeDBConfigs(configs, "")
 	connStr := generateConnectionString(dbConfig)
 
@@ -142,13 +143,15 @@ func RunMigrations(configs *configManager.Config) {
 	)
 
 	if err != nil {
-		log.Fatal("Migration setup failed:", err)
+		logger.Error("Migration setup failed", slog.Any("error", err))
+		return
 	}
 
 	// Apply migrations
 	if err := m.Up(); err != nil && err != migrate.ErrNoChange {
-		log.Fatal("Migration failed:", err)
+		logger.Error("Migration failed", slog.Any("error", err))
+		return
 	}
 
-	log.Println("Migrations applied successfully")
+	logger.Info("Migrations applied successfully")
 }

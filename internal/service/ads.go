@@ -28,8 +28,6 @@ func NewAdsService(cache cacher.Cache, logger *slog.Logger, store store.Ads) *se
 
 // RetrieveClicks returns the number of clicks for an ad in a given time range.
 func (c *service) RetrieveClicks(ctx fiber.Ctx, clickRange models.RetrieveClicksRequest) (models.ClicksOverRange, *httperrors.Error) {
-	c.logger.Info("RetrieveClicks called", slog.String("adID", clickRange.AdID), slog.String("start", clickRange.Start), slog.String("end", clickRange.End))
-
 	// Parse start time
 	startTime, err := time.Parse(time.RFC3339, clickRange.Start)
 	if err != nil {
@@ -69,20 +67,20 @@ func (c *service) RetrieveClicks(ctx fiber.Ctx, clickRange models.RetrieveClicks
 
 	if startDate.Before(todayDate) {
 		// For past data, use Postgres
-		c.logger.Info("Fetching click count from Postgres", slog.String("adID", clickRange.AdID))
 		totalClick, dbErr = c.store.RetrieveClickCountForTimeRange(ctx, clickRange.AdID, startTime, endTime)
 		if dbErr != nil {
 			c.logger.Error("Postgres error in RetrieveClickCountForTimeRange", slog.Any("error", dbErr))
 			return models.ClicksOverRange{}, dbErr
 		}
+
 	} else {
 		// For future/current, use cache
-		c.logger.Info("Fetching click count from cache", slog.String("adID", clickRange.AdID))
 		count, cacheError := c.cache.GetCountForTimeRange(ctx, clickRange.AdID, startTime.UnixMilli(), endTime.UnixMilli())
 		if cacheError != nil {
 			c.logger.Error("Cache error in GetCountForTimeRange", slog.Any("error", cacheError))
 			return models.ClicksOverRange{}, cacheError
 		}
+
 		totalClick = int(count)
 	}
 
@@ -93,34 +91,27 @@ func (c *service) RetrieveClicks(ctx fiber.Ctx, clickRange models.RetrieveClicks
 		End:         clickRange.End,
 	}
 
-	c.logger.Info("RetrieveClicks successful", slog.Int("totalClicks", totalClick))
 	return clickPerRange, nil
 }
 
 // RetrieveAllClicks returns all click records from cache.
 func (c *service) RetrieveAllClicks(ctx fiber.Ctx) ([]models.Click, *httperrors.Error) {
-	c.logger.Info("RetrieveAllClicks called")
-
 	clicks, err := c.cache.RetrieveAllClicks(ctx)
 	if err != nil {
 		c.logger.Error("Error retrieving all clicks from cache", slog.Any("error", err))
 		return nil, err
 	}
 
-	c.logger.Info("RetrieveAllClicks successful", slog.Int("count", len(clicks)))
 	return clicks, nil
 }
 
 // RetrieveAds returns all ads from the store.
 func (c *service) RetrieveAds(ctx fiber.Ctx) ([]models.Ads, *httperrors.Error) {
-	c.logger.Info("RetrieveAds called")
-
 	ads, err := c.store.RetrieveAds(ctx)
 	if err != nil {
 		c.logger.Error("Error retrieving ads from store", slog.Any("error", err))
 		return nil, err
 	}
 
-	c.logger.Info("RetrieveAds successful", slog.Int("count", len(ads)))
 	return ads, nil
 }

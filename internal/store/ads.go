@@ -22,7 +22,7 @@ func NewAdsStore(db *sql.DB, logger *slog.Logger, metrics *models.Metrics) *stor
 }
 
 func (s *store) RetrieveAds(ctx fiber.Ctx) ([]models.Ads, *httperrors.Error) {
-	s.log.Info("Querying ads table")
+	s.log.Debug("Querying ads table")
 	rows, err := s.db.Query("SELECT ad_id, name, campaign_id, media_url, created_at FROM ads")
 	if err != nil {
 		s.log.Error("DB query error", slog.Any("error", err))
@@ -44,18 +44,18 @@ func (s *store) RetrieveAds(ctx fiber.Ctx) ([]models.Ads, *httperrors.Error) {
 		s.log.Error("DB rows error", slog.Any("error", err))
 		return nil, httperrors.NewDBError()
 	}
-	s.log.Info("Ads query successful", slog.Int("count", len(ads)))
+	s.log.Debug("Ads query successful", slog.Int("count", len(ads)))
 	return ads, nil
 }
 
 func (s *store) RetrieveClickCountForTimeRange(ctx fiber.Ctx, adID string, start, end time.Time) (int, *httperrors.Error) {
-	s.log.Info("Querying ad_clicks for time range", slog.String("adID", adID), slog.Time("start", start), slog.Time("end", end))
+	s.log.Debug("Querying ad_clicks for time range", slog.String("adID", adID), slog.Time("start", start), slog.Time("end", end))
 	var count int
 	err := s.db.QueryRow("SELECT COUNT(*) FROM ad_clicks WHERE ad_Id = $1 AND ts BETWEEN $2 AND $3", adID, start, end).Scan(&count)
 	if err != nil {
 		s.log.Error("DB error", slog.Any("error", err))
 		return 0, httperrors.NewDBError()
 	}
-	s.log.Info("Click count query successful", slog.Int("count", count))
+	s.log.Debug("Click count query successful", slog.Int("count", count))
 	return count, nil
 }

@@ -32,17 +32,23 @@ func (h *handler) HandleClick(c fiber.Ctx) error {
 	// Bind and validate request body
 	if err := c.Bind().JSON(&evt); err != nil {
 		h.logger.Error("Invalid click event payload", slog.Any("error", err))
+
 		statuscode, errresp := httperrors.BodyValidationError().ErrorResponse()
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "400").Inc()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
 
 	//schema validation
 	if validationError := evt.Validate(); validationError != nil {
 		h.logger.Error("Click event validation failed", slog.Any("error", validationError))
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "422").Inc()
+
 		statuscode, errresp := validationError.ErrorResponse()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
 
 	// Marshal event to JSON
@@ -50,8 +56,11 @@ func (h *handler) HandleClick(c fiber.Ctx) error {
 	if err != nil {
 		h.logger.Error("Failed to marshal click event", slog.Any("error", err))
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "500").Inc()
+
 		statuscode, errresp := httperrors.NewServerError().ErrorResponse()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
 
 	// Publish event asynchronously
@@ -62,9 +71,10 @@ func (h *handler) HandleClick(c fiber.Ctx) error {
 		}
 	}()
 
-	h.logger.Info("Click event received", slog.String("adID", evt.AdID))
+	h.logger.Debug("Click event received", slog.String("adID", evt.AdID))
 
-	return c.Status(fiber.StatusOK).JSON(models.Response{Data: "click event received"})
+	c.Status(fiber.StatusOK).JSON(models.Response{Data: "click event received"})
+	return nil
 }
 func (h *handler) HandleRetrieveClicks(c fiber.Ctx) error {
 	// HandleRetrieveClicks returns analytics for a specific ad in a time range.
@@ -73,25 +83,31 @@ func (h *handler) HandleRetrieveClicks(c fiber.Ctx) error {
 	if adID == "" {
 		h.logger.Warn("Missing adID path param")
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "400").Inc()
+
 		statuscode, errresp := httperrors.BodyValidationError(httperrors.Details{
 			Field: "id",
 			Error: "id path param is required",
 		}).ErrorResponse()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
 
 	// Extract query params
-	startStr := c.Query("start")
-	endStr := c.Query("end")
+	startStr := c.Query("startDateTime")
+	endStr := c.Query("endDateTime")
 
 	if startStr == "" || endStr == "" {
-		h.logger.Warn("Missing start or end query param")
+		h.logger.Warn("Missing startDateTime or endDateTime query param")
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "400").Inc()
+
 		statuscode, errresp := httperrors.BodyValidationError(httperrors.Details{
 			Field: "query",
-			Error: "start and end query params are required",
+			Error: "startDateTime and endDateTime query params are required",
 		}).ErrorResponse()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
 
 	// Build request struct
@@ -106,12 +122,16 @@ func (h *handler) HandleRetrieveClicks(c fiber.Ctx) error {
 	if err != nil {
 		h.logger.Error("Error retrieving clicks", slog.Any("error", err))
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "500").Inc()
+
 		statuscode, errresp := err.ErrorResponse()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
 
-	h.logger.Info("Clicks analytics retrieved", slog.String("adID", adID))
-	return c.Status(fiber.StatusOK).JSON(models.Response{Data: clicks})
+	h.logger.Debug("Clicks analytics retrieved", slog.String("adID", adID))
+	c.Status(fiber.StatusOK).JSON(models.Response{Data: clicks})
+	return nil
 }
 
 func (h *handler) RetrieveAllClicks(c fiber.Ctx) error {
@@ -120,11 +140,15 @@ func (h *handler) RetrieveAllClicks(c fiber.Ctx) error {
 	if err != nil {
 		h.logger.Error("Error retrieving all clicks", slog.Any("error", err))
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "500").Inc()
+
 		statuscode, errresp := httperrors.NewServerError().ErrorResponse()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
-	h.logger.Info("All clicks retrieved", slog.Int("count", len(clicks)))
-	return c.Status(fiber.StatusOK).JSON(models.Response{Data: clicks})
+	h.logger.Debug("All clicks retrieved", slog.Int("count", len(clicks)))
+	c.Status(fiber.StatusOK).JSON(models.Response{Data: clicks})
+	return nil
 }
 
 func (h *handler) RetrieveAds(c fiber.Ctx) error {
@@ -133,10 +157,14 @@ func (h *handler) RetrieveAds(c fiber.Ctx) error {
 	if err != nil {
 		h.logger.Error("Error retrieving ads", slog.Any("error", err))
 		h.metrics.ErrorCounter.WithLabelValues(c.Method(), c.Path(), "500").Inc()
+
 		statuscode, errresp := httperrors.NewServerError().ErrorResponse()
-		return c.Status(statuscode).JSON(errresp)
+		c.Status(statuscode).JSON(errresp)
+
+		return nil
 	}
 
-	h.logger.Info("All ads retrieved", slog.Int("count", len(ads)))
-	return c.Status(fiber.StatusOK).JSON(models.Response{Data: ads})
+	h.logger.Debug("All ads retrieved", slog.Int("count", len(ads)))
+	c.Status(fiber.StatusOK).JSON(models.Response{Data: ads})
+	return nil
 }

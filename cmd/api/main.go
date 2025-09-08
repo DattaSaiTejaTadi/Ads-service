@@ -37,31 +37,33 @@ func main() {
 	log := slog.New(slog.NewJSONHandler(os.Stdout, nil))
 	slog.SetDefault(log)
 
-	store.RunMigrations(configs)
-	db := store.InitializeDB(configs, "")
+	store.RunMigrations(configs, log)
+
+	db := store.InitializeDB(configs, "", log)
 	if db == nil {
 		log.Error("Database connection failed")
 	}
+
 	defer db.Close()
 
 	producer := kafka.NewProducer([]string{configs.GetConfig("KAFKA_ADDRESS")}, configs.GetConfig("KAFKA_TOPIC"), metrics)
 	defer producer.Close()
 
-	rdb := cacher.Init(context.Background(), db, configs.GetConfig("redis_addr"))
+	rdb := cacher.Init(context.Background(), db, configs.GetConfig("redis_addr"), log)
 	defer rdb.Close()
 
 	store := store.NewAdsStore(db, log, metrics)
 	redisClient := cacher.NewCacher(rdb, log, metrics)
 	clicksService := service.NewAdsService(redisClient, log, store)
 	adsHandler := handler.NewAdsHandler(producer, clicksService, log, metrics)
-	// Import the fasthttpadaptor package at the top:
-	// "github.com/valyala/fasthttp/fasthttpadaptor"
 
+	// Metrics endpoint
 	app.Get("/metrics", func(c fiber.Ctx) error {
 		fasthttpadaptor.NewFastHTTPHandler(promhttp.Handler())(c.RequestCtx())
 		return nil
 	})
 
+	// Routes
 	app.Post("/ads/click", adsHandler.HandleClick)
 	app.Get("/ads/:id/analytics", adsHandler.HandleRetrieveClicks)
 	app.Get("/ads/analytics", adsHandler.RetrieveAllClicks)

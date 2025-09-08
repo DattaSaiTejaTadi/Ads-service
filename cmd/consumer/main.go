@@ -5,7 +5,6 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	"log"
 	"os"
 	"os/signal"
 	"sync"
@@ -40,27 +39,6 @@ var (
 	mu             sync.Mutex
 )
 
-func batchInsertClickEvents(db *sql.DB, events []models.ClickEvent) error {
-	if len(events) == 0 {
-		return nil
-	}
-	query := "INSERT INTO ad_clicks (click_id, ad_id, name, ip, ts) VALUES "
-	args := []interface{}{}
-	for i, evt := range events {
-		if i > 0 {
-			query += ","
-		}
-		query += fmt.Sprintf("($%d, $%d, $%d, $%d, $%d)", i*5+1, i*5+2, i*5+3, i*5+4, i*5+5)
-		args = append(args, evt.ClickID, evt.AdID, evt.Name, evt.IP, evt.Timestamp)
-	}
-	query += " ON CONFLICT DO NOTHING"
-	_, err := db.Exec(query, args...)
-	if err != nil {
-		slog.Error("Postgres batch insert failed", slog.Any("error", err))
-	}
-	return err
-}
-
 func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
@@ -83,6 +61,7 @@ func main() {
 		configs.GetConfig("KAFKA_TOPIC"),
 		metrics,
 	)
+
 	defer kafkaConsumer.Close()
 
 	// Redis client setup
@@ -92,18 +71,21 @@ func main() {
 		PoolSize:     workerCount * 2,
 		MinIdleConns: workerCount,
 	})
+
 	if err := rdb.Ping(ctx).Err(); err != nil {
 		slog.Error("Could not connect to Redis", slog.Any("error", err))
 		os.Exit(1)
 	}
+
 	defer rdb.Close()
 
 	// Postgres setup
 
-	db := store.InitializeDB(configs, "")
+	db := store.InitializeDB(configs, "", slog.Default())
 	if db == nil {
-		log.Fatal("Database connection failed")
+		slog.Error("Database connection failed")
 	}
+
 	defer db.Close()
 
 	redisConsumer := redisconsumer.NewConsumerService(rdb)
@@ -184,6 +166,7 @@ func main() {
 			case <-ctx.Done():
 				if len(batch) > 0 {
 					slog.Debug("Flushing Postgres batch due to shutdown", slog.Any("batch_size", len(batch)))
+
 					err := batchInsertClickEvents(db, batch)
 					if err != nil {
 						slog.Error("Failed to insert batch into Postgres", slog.Any("error", err))
@@ -196,20 +179,24 @@ func main() {
 				slog.Debug("Event added to Postgres batch", slog.Any("current_batch_size", len(batch)))
 				if len(batch) >= batchSize {
 					slog.Debug("Flushing Postgres batch due to batchSize", slog.Any("batch_size", len(batch)))
+
 					err := batchInsertClickEvents(db, batch)
 					if err != nil {
 						slog.Error("Failed to insert batch into Postgres", slog.Any("error", err))
 					}
+
 					batch = batch[:0]
 				}
 
 			case <-ticker.C:
 				if len(batch) > 0 {
 					slog.Debug("Flushing Postgres batch due to flushTimeout", slog.Any("batch_size", len(batch)))
+
 					err := batchInsertClickEvents(db, batch)
 					if err != nil {
 						slog.Error("Failed to insert batch into Postgres", slog.Any("error", err))
 					}
+
 					batch = batch[:0]
 				}
 			}
@@ -226,10 +213,12 @@ func main() {
 			case <-ctx.Done():
 				if len(batch) > 0 {
 					slog.Debug("Committing Kafka offsets due to shutdown", slog.Any("batch_size", len(batch)))
+
 					if err := kafkaConsumer.CommitMessages(ctx, batch...); err != nil {
 						slog.Warn("Commit failed", slog.Any("error", err))
 					}
 				}
+
 				return
 			case m := <-commitCh:
 				msg, ok := m.(kafkago.Message)
@@ -237,21 +226,27 @@ func main() {
 					slog.Debug("Commit channel received non-Kafka message", slog.Any("msg", m))
 					continue
 				}
+
 				batch = append(batch, msg)
 				slog.Debug("Kafka message added to commit batch", slog.Any("offset", msg.Offset), slog.Any("current_batch_size", len(batch)))
+
 				if len(batch) >= batchSize {
+
 					slog.Debug("Committing Kafka offsets due to batchSize", slog.Any("batch_size", len(batch)))
 					if err := kafkaConsumer.CommitMessages(ctx, batch...); err != nil {
 						slog.Warn("Commit failed", slog.Any("error", err))
 					}
+
 					batch = batch[:0]
 				}
 			case <-ticker.C:
 				if len(batch) > 0 {
+
 					slog.Debug("Committing Kafka offsets due to flushTimeout", slog.Any("batch_size", len(batch)))
 					if err := kafkaConsumer.CommitMessages(ctx, batch...); err != nil {
 						slog.Warn("Commit failed", slog.Any("error", err))
 					}
+
 					batch = batch[:0]
 				}
 			}
@@ -260,4 +255,30 @@ func main() {
 
 	<-ctx.Done()
 	slog.Info("Consumer shutdown complete")
+}
+
+func batchInsertClickEvents(db *sql.DB, events []models.ClickEvent) error {
+	if len(events) == 0 {
+		return nil
+	}
+
+	query := "INSERT INTO ad_clicks (click_id, ad_id, name, ip, ts) VALUES "
+	args := []interface{}{}
+
+	for i, evt := range events {
+		if i > 0 {
+			query += ","
+		}
+
+		query += fmt.Sprintf("($%d, $%d, $%d, $%d, $%d)", i*5+1, i*5+2, i*5+3, i*5+4, i*5+5)
+		args = append(args, evt.ClickID, evt.AdID, evt.Name, evt.IP, evt.Timestamp)
+	}
+	query += " ON CONFLICT DO NOTHING"
+
+	_, err := db.Exec(query, args...)
+	if err != nil {
+		slog.Error("Postgres batch insert failed", slog.Any("error", err))
+	}
+
+	return err
 }

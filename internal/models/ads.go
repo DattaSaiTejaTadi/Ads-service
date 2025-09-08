@@ -16,40 +16,17 @@ type ClickEvent struct {
 	Timestamp time.Time `json:"timestamp"`
 }
 
-// Validate checks if all fields in ClickEvent are present and valid.
-func (c *ClickEvent) Validate() *httperrors.Error {
-	if c.ClickID == "" || c.Name == "" || c.AdID == "" || c.IP == "" || c.Timestamp.IsZero() {
-		return httperrors.BodyValidationError(httperrors.Details{
-			Field: "ClickEvent",
-			Error: "one or more required fields are missing",
-		})
-	}
-	if _, err := uuid.Parse(c.ClickID); err != nil {
-		return httperrors.BodyValidationError(httperrors.Details{
-			Field: "clickId",
-			Error: "must be a valid UUID",
-		})
-	}
-	if _, err := uuid.Parse(c.AdID); err != nil {
-		return httperrors.BodyValidationError(httperrors.Details{
-			Field: "ad_id",
-			Error: "must be a valid UUID",
-		})
-	}
-	return nil
-}
-
 type ClicksOverRange struct {
 	AdID        string `json:"ad_id"`
 	TotalClicks int    `json:"totalclicks"`
-	Start       string `json:"start"`
-	End         string `json:"end"`
+	Start       string `json:"startDateTime"`
+	End         string `json:"endDateTime"`
 }
 
 type RetrieveClicksRequest struct {
 	AdID  string `json:"ad_id"`
-	Start string `json:"start"`
-	End   string `json:"end"`
+	Start string `json:"startDateTime"`
+	End   string `json:"endDateTime"`
 }
 
 type Click struct {
@@ -78,4 +55,27 @@ type Metrics struct {
 	CacheMisses     *prometheus.CounterVec
 	EventsProcessed *prometheus.CounterVec
 	EventsConsumed  *prometheus.CounterVec
+}
+
+// Validate checks if all fields in ClickEvent are present and valid.
+func (c *ClickEvent) Validate() *httperrors.Error {
+	if c.ClickID == "" || c.Name == "" || c.AdID == "" || c.IP == "" || c.Timestamp.IsZero() {
+		return httperrors.BodyValidationError(httperrors.Details{
+			Field: "ClickEvent",
+			Error: "one or more required fields are missing",
+		})
+	}
+	if _, err := uuid.Parse(c.ClickID); err != nil {
+		return httperrors.BodyValidationError(httperrors.Details{
+			Field: "clickId",
+			Error: "must be a valid UUID",
+		})
+	}
+	if _, err := uuid.Parse(c.AdID); err != nil {
+		return httperrors.BodyValidationError(httperrors.Details{
+			Field: "ad_id",
+			Error: "must be a valid UUID",
+		})
+	}
+	return nil
 }

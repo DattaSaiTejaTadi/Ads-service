@@ -234,20 +234,20 @@ Retrieve clicks for a specific ad within a time range.
 **Request:**
 
 ```bash
-GET /ads/{ad_id}/analytics?start={start_time}&end={end_time}
+GET /ads/{ad_id}/analytics?startDateTime={start_time}&endDateTime={end_time}
 
 ```
 
 **Parameters:**
 
 -   `ad_id` (required): UUID of the ad
--   `start` (required): Start timestamp in RFC3339 format
--   `end` (required): End timestamp in RFC3339 format
+-   `startDateTime` (required): Start timestamp in RFC3339 format
+-   `endDateTime` (required): End timestamp in RFC3339 format
 
 **Example:**
 
 ```bash
-curl "http://localhost:8080/ads/64bb7845-5133-4d7e-bfc4-30747fe38f1d/analytics?start=2025-09-05T10%3A00%3A00Z&end=2025-09-06T10%3A05%3A00Z"
+curl "http://localhost:8080/ads/64bb7845-5133-4d7e-bfc4-30747fe38f1d/analytics?startDateTime=2025-09-05T10%3A00%3A00Z&endDateTime=2025-09-06T10%3A05%3A00Z"
 
 ```
 
@@ -258,8 +258,8 @@ curl "http://localhost:8080/ads/64bb7845-5133-4d7e-bfc4-30747fe38f1d/analytics?s
   "data": {
     "ad_id": "64bb7845-5133-4d7e-bfc4-30747fe38f1d",
     "totalclicks": 180905,
-    "start": "2025-09-05T10:00:00Z",
-    "end": "2025-09-06T10:05:00Z"
+    "startDateTime": "2025-09-05T10:00:00Z",
+    "endDateTime": "2025-09-06T10:05:00Z"
   }
 }
 
@@ -267,7 +267,7 @@ curl "http://localhost:8080/ads/64bb7845-5133-4d7e-bfc4-30747fe38f1d/analytics?s
 
 #### 4. Publish Click Event
 
-Publish a new ad click event to the system.
+Publish a new ad click event to the system. clickId should be unique for every click, this will help for achieving Idompotent behaviour with IP address.
 
 **Request:**
 
@@ -355,8 +355,8 @@ Comprehensive load testing was performed using **Apache JMeter**:
 ┌───────┬────────────┬──────────────┬──────────┬──────────────┐
 │ Users │ Iterations │ Total Events │ Duration │ Result       │
 ├───────┼────────────┼──────────────┼──────────┼──────────────┤
-│  100  │    100     │   10,000     │ ~50 sec  │ ✅ Success   │
-│  200  │    200     │   40,000     │ ~50 sec  │ ✅ Success   │
+│  100  │    100     │   10,000     │ ~10 sec  │ ✅ Success   │
+│  200  │    200     │   40,000     │ ~20 sec  │ ✅ Success   │
 │  300  │    300     │   90,000     │ ~50 sec  │ ✅ Success   │
 └───────┴────────────┴──────────────┴──────────┴──────────────┘
 
@@ -378,13 +378,6 @@ Each test simulated the complete flow:
 -   ✅ Consistent response times under high concurrency
 -   ✅ Efficient resource utilization across all components
 
-## Contributing
-
-1.  Fork the repository
-2.  Create a feature branch (`git checkout -b feature/amazing-feature`)
-3.  Commit your changes (`git commit -m 'Add some amazing feature'`)
-4.  Push to the branch (`git push origin feature/amazing-feature`)
-5.  Open a Pull Request
 
 ----------
 

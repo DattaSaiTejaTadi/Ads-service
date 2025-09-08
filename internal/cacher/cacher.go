@@ -23,7 +23,7 @@ func NewCacher(client *redis.Client, logger *slog.Logger, metrics *models.Metric
 }
 
 func (c *cacher) GetCountForTimeRange(ctx fiber.Ctx, adID string, start, end int64) (int64, *httperrors.Error) {
-	key := "ad:" + adID + ":clicks:zset" // ✅ match your storage key
+	key := "ad:" + adID + ":clicks:zset" 
 	count, err := c.client.ZCount(
 		ctx,
 		key,
@@ -35,6 +35,7 @@ func (c *cacher) GetCountForTimeRange(ctx fiber.Ctx, adID string, start, end int
 		c.metrics.CacheMisses.WithLabelValues("GetCountForTimeRange").Inc()
 		return 0, httperrors.NewDBError()
 	}
+	
 	c.metrics.CacheHits.WithLabelValues("GetCountForTimeRange").Inc()
 	return count, nil
 }

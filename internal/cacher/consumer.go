@@ -9,6 +9,15 @@ import (
 	"github.com/redis/go-redis/v9"
 )
 
+
+type ConsumerService struct {
+	client  *redis.Client
+}
+
+func NewConsumerService(client *redis.Client) *ConsumerService {
+	return &ConsumerService{client: client}
+}
+
 // ProcessClickEventPipeline batches Redis operations for a ClickEvent using pipelining.
 func (r *ConsumerService) ProcessClickEventPipeline(evt models.ClickEvent) error {
 	if evt.AdID == "" || evt.ClickID == "" || evt.IP == "" {
@@ -26,6 +35,7 @@ func (r *ConsumerService) ProcessClickEventPipeline(evt models.ClickEvent) error
 	if err != nil && err != redis.Nil {
 		return err
 	}
+	
 	if err == nil && exists > 0 {
 		// already exists, skip
 		return nil
@@ -53,10 +63,4 @@ func (r *ConsumerService) ProcessClickEventPipeline(evt models.ClickEvent) error
 }
 
 // ConsumerService handles Redis operations for the consumer.
-type ConsumerService struct {
-	client  *redis.Client
-}
 
-func NewConsumerService(client *redis.Client) *ConsumerService {
-	return &ConsumerService{client: client}
-}
