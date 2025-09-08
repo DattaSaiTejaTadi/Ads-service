@@ -73,7 +73,7 @@ func (h *handler) HandleClick(c fiber.Ctx) error {
 
 	h.logger.Debug("Click event received", slog.String("adID", evt.AdID))
 
-	c.Status(fiber.StatusOK).JSON(models.Response{Data: "click event received"})
+	c.Status(fiber.StatusAccepted).JSON(models.Response{Data: "click event received"})
 	return nil
 }
 func (h *handler) HandleRetrieveClicks(c fiber.Ctx) error {
