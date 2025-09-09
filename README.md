@@ -5,18 +5,6 @@
 
 A high-performance backend system for tracking ad clicks, storing events, and generating real-time analytics. Built with **Go**, **PostgreSQL**, **Redis**, and **Kafka** to handle high-throughput click streams efficiently.
 
-## Table of Contents
-
--   [Features](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#features)
--   [Architecture](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#architecture)
--   [Installation](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#installation)
--   [Configuration](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#configuration)
--   [API Documentation](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#api-documentation)
--   [Design Overview](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#design-overview)
--   [Performance Testing](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#performance-testing)
--   [Contributing](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#contributing)
--   [License](https://claude.ai/chat/7b8dd621-9e9c-4a9e-9070-07a44d6fb245#license)
-
 ## Features
 
 -   🚀 **High-throughput** click event processing
